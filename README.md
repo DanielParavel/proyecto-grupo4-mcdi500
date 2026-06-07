@@ -18,6 +18,8 @@ variables clínicas estructuradas, aplicando el marco metodológico CRISP-DM.
 ---
 
 ## Estructura del repositorio
+
+```
 proyecto-grupo4-mcdi500/
 ├── data/
 │   ├── raw/          # diabetes.csv — datos originales sin modificar
@@ -28,8 +30,9 @@ proyecto-grupo4-mcdi500/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
-___
+---
 
 ## Instalación del entorno
 
@@ -49,7 +52,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-___
+---
 
 ## Fases del proyecto
 
