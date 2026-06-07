@@ -1,0 +1,17 @@
+# Entornos Virtuales
+venv/
+.venv/
+env/
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+# Jupyter checkpoints
+.ipynb_checkpoints/
+# macOS
+.DS_Store
+# IDEs
+.vscode/
+.idea/
+.Rhistory
