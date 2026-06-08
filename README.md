@@ -57,7 +57,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Iniciar Jupyter
-jupyter notebook
+jupyter notebook notebooks/F1_Definicion.ipynb
 ```
 
 ---
