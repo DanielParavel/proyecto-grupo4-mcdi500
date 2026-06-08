@@ -8,6 +8,14 @@
 **Docente:** Omar Salinas Silva  
 
 ---
+## Dataset
+
+- **Nombre:** Pima Indians Diabetes Database
+- **Fuente:** UCI Machine Learning Repository / Kaggle
+- **Registros:** 768 · **Variables:** 8 predictoras + 1 objetivo (Outcome)
+- **Ubicación:** `data/raw/diabetes.csv`
+
+---
 
 ## Descripción
 
