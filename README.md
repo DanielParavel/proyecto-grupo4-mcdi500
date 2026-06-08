@@ -50,8 +50,13 @@ git clone git@github.com:DanielParavel/proyecto-grupo4-mcdi500.git
 cd proyecto-grupo4-mcdi500
 
 # Crear entorno virtual
-python3 -m venv venv
+# macOS
+python3.11 -m venv venv
 source venv/bin/activate
+
+# Windows (Git Bash)
+py -3.11 -m venv venv
+source venv/Scripts/activate
 
 # Instalar dependencias
 pip install -r requirements.txt
