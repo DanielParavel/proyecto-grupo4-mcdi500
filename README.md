@@ -85,6 +85,17 @@ Al ejecutar F2 con **Kernel → Restart & Run All**, se genera automáticamente
 `data/processed/diabetes_clean.csv` (15.000 filas × 9 columnas, normalizado).
 
 
+### Fase 3 — Análisis exploratorio avanzado y complejidad algorítmica
+
+```bash
+jupyter notebook notebooks/F3_Modelado.ipynb
+```
+
+El notebook implementa la clase `AnalizadorDiabetes` con estadísticos por clase,
+detección de outliers IQR, correlaciones y ranking recursivo de variables.
+Requiere que F2 haya sido ejecutado previamente para disponer de
+`data/processed/diabetes_clean.csv`.
+
 ---
 
 ## Fases del proyecto
