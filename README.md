@@ -84,6 +84,7 @@ jupyter notebook notebooks/F2_Preprocesamiento.ipynb
 Al ejecutar F2 con **Kernel → Restart & Run All**, se genera automáticamente
 `data/processed/diabetes_clean.csv` (15.000 filas × 9 columnas, normalizado).
 
+
 ---
 
 ## Fases del proyecto
@@ -118,3 +119,4 @@ Al ejecutar F2 con **Kernel → Restart & Run All**, se genera automáticamente
 | dev-daniel | Desarrollo activo de Daniel Hormazábal |
 | dev-enso | Desarrollo activo de Enso Guidotti |
 | dev-cristian | Desarrollo activo de Cristian Pasten |
+
