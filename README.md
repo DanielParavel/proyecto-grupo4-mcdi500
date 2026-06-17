@@ -34,10 +34,12 @@ proyecto-grupo4-mcdi500/
 ├── data/
 │   ├── raw/              # diabetes.csv — datos originales sin modificar
 │   └── processed/        # diabetes_clean.csv — generado por F2
+├── docs/                 # documentación técnica y guías
 ├── notebooks/
 │   ├── F1_Definicion.ipynb
 │   └── F2_Preprocesamiento.ipynb
-├── docs/                 # documentación técnica y guías
+├── src/              # scripts Python modulares
+│   └── .ipynb
 ├── .gitignore
 ├── requirements.txt
 └── README.md
