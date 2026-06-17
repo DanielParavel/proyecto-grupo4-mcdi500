@@ -38,8 +38,11 @@ proyecto-grupo4-mcdi500/
 ├── notebooks/
 │   ├── F1_Definicion.ipynb
 │   └── F2_Preprocesamiento.ipynb
+│   └── F3/
+│       ├── F3_Modelado.ipynb 
+│       └── README.md     # ejecución de la fase 3
 ├── src/              # scripts Python modulares
-│   └── .ipynb
+│   └── Analizador.py 
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -118,4 +121,4 @@ jupyter notebook F3/F3_Modelado.ipynb
 | dev | Integración del equipo. Punto de convergencia antes de main |
 | dev-daniel | Desarrollo activo de Daniel Hormazábal |
 | dev-enso | Desarrollo activo de Enso Guidotti |
-| dev-cristian | Cristián esta utilizando git de manera local por problemas con GITHUB |
+| dev-cristian | Desarrollo activo de Cristian Pasten |

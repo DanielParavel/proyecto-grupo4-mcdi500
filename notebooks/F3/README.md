@@ -71,6 +71,20 @@ pip install -r requirements.txt
 ---
 ### Fase 3 — Núcleo algorítmico, eficiencia e implementación orientada a objetos
 
+## Módulo reutilizable (`src/Analizador.py`)
+
+Contiene todas las clases del sistema, importables desde cualquier notebook:
+
+| Clase | Tipo | Responsabilidad |
+|-------|------|-----------------|
+| `Transformador` | ABC | Contrato común: define `aplicar(df)` |
+| `ExcluirColumna` | Subclase | Elimina columnas sin valor predictivo |
+| `EliminarDuplicados` | Subclase | Garantiza integridad del dataset |
+| `ImputarMediana` | Subclase | Imputa NaN con mediana (robusta a outliers) |
+| `NormalizarMinMax` | Subclase | Escala features al rango [0, 1] |
+| `Pipeline` | Composición | Orquesta etapas con polimorfismo |
+| `AnalizadorDiabetes` | Encapsulamiento | Análisis exploratorio con caché interno 
+
 ```bash
 jupyter notebook F3/F3_Modelado.ipynb
 ```
@@ -102,4 +116,4 @@ El notebook implementa:
 | dev | Integración del equipo. Punto de convergencia antes de main |
 | dev-daniel | Desarrollo activo de Daniel Hormazábal |
 | dev-enso | Desarrollo activo de Enso Guidotti |
-| dev-cristian | Cristián esta utilizando git de manera local por problemas con GITHUB |
+| dev-cristian | Desarrollo activo de Cristian Pasten |
