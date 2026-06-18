@@ -34,15 +34,13 @@ proyecto-grupo4-mcdi500/
 ├── data/
 │   ├── raw/              # diabetes.csv — datos originales sin modificar
 │   └── processed/        # diabetes_clean.csv — generado por F2
-├── docs/                 # documentación técnica y guías
 ├── notebooks/
 │   ├── F1_Definicion.ipynb
-│   └── F2_Preprocesamiento.ipynb
+│   ├── F2_Preprocesamiento.ipynb
 │   └── F3/
 │       ├── F3_Modelado.ipynb 
-│       └── README.md     # ejecución de la fase 3
-├── src/              # scripts Python modulares
-│   └── Analizador.py 
+│       └── README.md     #ejecución de la fase 3
+├── docs/                 # documentación técnica y guías
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -58,7 +56,7 @@ git clone git@github.com:DanielParavel/proyecto-grupo4-mcdi500.git
 cd proyecto-grupo4-mcdi500
 
 # Crear entorno virtual
-# macOS
+# macOS / Linux
 python3.11 -m venv venv
 source venv/bin/activate
 
@@ -71,27 +69,21 @@ pip install -r requirements.txt
 ```
 
 ---
-
-## Ejecución
-
-### Fase 1 — Definición e inspección
-
-```bash
-jupyter notebook notebooks/F1_Definicion.ipynb
-```
-
-### Fase 2 — Preprocesamiento y transformación
-
-```bash
-jupyter notebook notebooks/F2_Preprocesamiento.ipynb
-```
-
-Al ejecutar F2 con **Kernel → Restart & Run All**, se genera automáticamente
-`data/processed/diabetes_clean.csv` (15.000 filas × 9 columnas, normalizado).
-
-
----
 ### Fase 3 — Núcleo algorítmico, eficiencia e implementación orientada a objetos
+
+## Módulo reutilizable (`src/Analizador.py`)
+
+Contiene todas las clases del sistema, importables desde cualquier notebook:
+
+| Clase | Tipo | Responsabilidad |
+|-------|------|-----------------|
+| `Transformador` | ABC | Contrato común: define `aplicar(df)` |
+| `ExcluirColumna` | Subclase | Elimina columnas sin valor predictivo |
+| `EliminarDuplicados` | Subclase | Garantiza integridad del dataset |
+| `ImputarMediana` | Subclase | Imputa NaN con mediana (robusta a outliers) |
+| `NormalizarMinMax` | Subclase | Escala features al rango [0, 1] |
+| `Pipeline` | Composición | Orquesta etapas con polimorfismo |
+| `AnalizadorDiabetes` | Encapsulamiento | Análisis exploratorio con caché interno 
 
 ```bash
 jupyter notebook F3/F3_Modelado.ipynb
@@ -99,19 +91,22 @@ jupyter notebook F3/F3_Modelado.ipynb
 **Requisito previo:** F2 debe haberse ejecutado para disponer de 
 `data/processed/diabetes_clean.csv`.
 
+El notebook implementa:
+
+- **Pipeline POO** — jerarquía `Transformador` (ABC) con 4 subclases concretas
+  (`ExcluirColumna`, `EliminarDuplicados`, `ImputarMediana`, `NormalizarMinMax`)
+  y clase `Pipeline` con composición y polimorfismo.
+- **Validación técnica** — 5 pruebas formales con `assert`/`try-except` cubriendo
+  casos normal, límite y excepción.
+- **Clase `AnalizadorDiabetes`** — estadísticos por clase, outliers IQR,
+  correlaciones Pearson y ranking de variables.
+- **Merge sort recursivo** — `_merge_sort_recursivo()` y `_merge()` como
+  `@staticmethod` dentro de `AnalizadorDiabetes`. Complejidad O(p·log p).
+- **Mediciones con `timeit`** — escalamiento sobre 5 tamaños (1k → 15k filas)
+  y comparación iterativo vs. vectorizado (~41× speedup).
+- **Complejidad espacial** — medición con `tracemalloc`.
+
 ---
-
-## Fases del proyecto
-
-| Fase | Descripción | Notebook | Estado |
-|------|-------------|----------|--------|
-| F1 | Definición del problema y configuración del entorno | F1_Definicion.ipynb | ✓ Completada |
-| F2 | Obtención, limpieza y transformación de datos | F2_Preprocesamiento.ipynb | ✓ Completada |
-| F3 | Núcleo algorítmico, eficiencia e implementación POO | F3/F3_Modelado.ipynb | ✓ Completada |
-| F4 | Evaluación y conclusiones | — | Pendiente |
-
----
-
 
 ## Estrategia de ramas
 
