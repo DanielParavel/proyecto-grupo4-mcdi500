@@ -37,10 +37,12 @@ proyecto-grupo4-mcdi500/
 ├── docs/                 # documentación técnica y guías
 ├── notebooks/
 │   ├── F1_Definicion.ipynb
-│   └── F2_Preprocesamiento.ipynb
-│   └── F3/
-│       ├── F3_Modelado.ipynb 
-│       └── README.md     # ejecución de la fase 3
+│   ├── F2_Preprocesamiento.ipynb
+│   ├── F3/
+│   │    ├── F3_Modelado.ipynb 
+│   │    └── README.md     # ejecución de la fase 3
+│   └── F4/
+│       └── F4_Visualizacion.ipynb 
 ├── src/              # scripts Python modulares
 │   └── Analizador.py 
 ├── .gitignore
@@ -100,7 +102,18 @@ jupyter notebook F3/F3_Modelado.ipynb
 `data/processed/diabetes_clean.csv`.
 
 ---
+### Fase 4 — Visualizaciones analíticas y comunicación de resultados
 
+```bash
+jupyter notebook notebooks/F4/F4_Visualizacion.ipynb
+```
+
+Ejecutar con **Kernel → Restart & Run All**. El notebook carga los datos crudos
+directamente desde `data/raw/diabetes.csv`, ejecuta el pipeline POO desde
+`src/Analizador.py` y exporta automáticamente los tres gráficos analíticos a `docs/`.
+No requiere ejecución previa de F2 o F3.
+
+---
 ## Fases del proyecto
 
 | Fase | Descripción | Notebook | Estado |
@@ -108,8 +121,7 @@ jupyter notebook F3/F3_Modelado.ipynb
 | F1 | Definición del problema y configuración del entorno | F1_Definicion.ipynb | ✓ Completada |
 | F2 | Obtención, limpieza y transformación de datos | F2_Preprocesamiento.ipynb | ✓ Completada |
 | F3 | Núcleo algorítmico, eficiencia e implementación POO | F3/F3_Modelado.ipynb | ✓ Completada |
-| F4 | Evaluación y conclusiones | — | Pendiente |
-
+| F4 | Visualizaciones analíticas y comunicación de resultados | F4/F4_Visualizacion.ipynb | ✓ Completada |
 ---
 
 
