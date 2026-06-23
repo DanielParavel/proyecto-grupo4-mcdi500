@@ -3,7 +3,11 @@ numpy==2.2.6
 matplotlib==3.9.4
 jupyter==1.0.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 seaborn==0.13.2
 =======
 seaborn==0.12.2
 >>>>>>> 629f75d228da8c03f5b20c272a3744bd0db92c86
+=======
+seaborn==0.13.2
+>>>>>>> 7a8def1
