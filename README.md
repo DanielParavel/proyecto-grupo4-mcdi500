@@ -42,7 +42,8 @@ proyecto-grupo4-mcdi500/
 │   │    ├── F3_Modelado.ipynb 
 │   │    └── README.md     # ejecución de la fase 3
 │   └── F4/
-│       └── F4_Visualizacion.ipynb 
+│       ├── F4_Visualizacion.ipynb
+│       └── README.md      #ejecución de la fase 4
 ├── src/              # scripts Python modulares
 │   └── Analizador.py 
 ├── .gitignore
@@ -102,7 +103,7 @@ jupyter notebook F3/F3_Modelado.ipynb
 `data/processed/diabetes_clean.csv`.
 
 ---
-### Fase 4 — Visualizaciones analíticas y comunicación de resultados
+### Fase 4 — Análisis, reproducibilidad y comunicación de resultados
 
 ```bash
 jupyter notebook notebooks/F4/F4_Visualizacion.ipynb
