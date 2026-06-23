@@ -41,7 +41,7 @@ proyecto-grupo4-mcdi500/
 │   │   ├── F3_Modelado.ipynb
 │   │   └── README.md     #ejecución de la fase 3
 │   └── F4/
-│       ├── F4_Modelado.ipynb
+│       ├── F4_Visualizacion.ipynb
 │       └── README.md     #ejecución de la fase 4
 ├── src/                   # módulo reutilizable (Analizador.py)
 ├── docs/                  # documentación técnica y guías
@@ -90,11 +90,16 @@ la reproducibilidad del módulo entre fases:
 | `Pipeline` | Composición | Orquesta etapas con polimorfismo |
 | `AnalizadorDiabetes` | Encapsulamiento | Análisis exploratorio con caché interno |
 
+---
+
 ```bash
-jupyter notebook F4/F4_Modelado.ipynb
+jupyter notebook notebooks/F4/F4_Visualizacion.ipynb
 ```
-**Requisito previo:** F3 debe haberse ejecutado (o `src/Analizador.py` debe estar
-disponible) para disponer de las clases del pipeline y de `data/processed/diabetes_clean.csv`.
+
+Ejecutar con **Kernel → Restart & Run All**. El notebook carga los datos crudos
+directamente desde `data/raw/diabetes.csv`, ejecuta el pipeline POO desde
+`src/Analizador.py` y exporta automáticamente los tres gráficos analíticos a `docs/`.
+No requiere ejecución previa de F2 o F3.
 
 El notebook implementa:
 
